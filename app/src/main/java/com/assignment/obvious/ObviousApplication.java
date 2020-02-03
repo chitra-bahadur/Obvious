@@ -8,7 +8,7 @@ import com.assignment.obvious.di.component.DaggerApplicationComponent;
 //app component lives in the application class to share its life cycle
 public class ObviousApplication extends Application {
 
-    ApplicationComponent appComponent;
+    public ApplicationComponent appComponent;
 
     @Override
     public void onCreate() {
