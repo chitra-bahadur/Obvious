@@ -6,22 +6,24 @@ import android.os.Bundle;
 
 import com.assignment.obvious.ObviousApplication;
 import com.assignment.obvious.R;
+import com.assignment.obvious.di.component.MainComponent;
 
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
 
-    //dagger will provide an instance of MainViewModel from the graph
+    //Reference to the Main graph
+    MainComponent mainComponent;
+
     @Inject
-    MainViewModel mMainViewModel;
+    MainViewModel mainViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Make Dagger instantiate @Inject fields in MainActivity
-        ((ObviousApplication) getApplicationContext()).appComponent.inject(this);
-        //Now MainViewModel is available
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        // Creation of the main graph using the application graph
+        mainComponent = ((ObviousApplication) getApplicationContext())
+                .appComponent.mainComponent().create();
     }
 }

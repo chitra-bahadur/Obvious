@@ -1,9 +1,14 @@
 package com.assignment.obvious.di.module;
 
 import android.app.Application;
+import android.content.Context;
 
+import com.assignment.obvious.data.model.ImageData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -24,6 +29,11 @@ public class ApplicationModule {
     @Provides
     @Singleton
     public Application application() {
+        return application;
+    }
+
+    @Provides
+    public Context context() {
         return application;
     }
 

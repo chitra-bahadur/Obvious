@@ -21,15 +21,13 @@ public class LocalDataSource {
     Context context;
     Gson gson;
     Type type;
-    List<ImageData> imageDataList;
+
 
     @Inject
-    public LocalDataSource(Context context, Gson gson, Type type,
-                           List<ImageData> imageDataList) {
+    public LocalDataSource(Context context, Gson gson, Type type) {
         this.context = context;
         this.gson = gson;
         this.type = type;
-        this.imageDataList = imageDataList;
     }
 
     public String loadJSONFromAssets() {
@@ -49,6 +47,7 @@ public class LocalDataSource {
     }
 
     public List<ImageData> getData() {
+        List<ImageData> imageDataList = null;
         try {
             imageDataList = gson.fromJson(loadJSONFromAssets(), type);
         } catch (Exception ae) {
