@@ -1,6 +1,8 @@
 package com.assignment.obvious.di.component;
 
 import com.assignment.obvious.data.repository.Repository;
+import com.assignment.obvious.ui.detail.ImageDetailsFragment;
+import com.assignment.obvious.ui.grid.ImageGridFragment;
 import com.assignment.obvious.ui.main.MainActivity;
 
 import dagger.Subcomponent;
@@ -25,4 +27,8 @@ public interface MainComponent {
     void inject(MainActivity mainActivity);
 
     void inject(Repository repository);
+
+    void inject(ImageDetailsFragment imageDetailsFragment);
+
+    void inject(ImageGridFragment imageGridFragment);
 }

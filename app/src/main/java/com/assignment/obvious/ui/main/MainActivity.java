@@ -13,7 +13,7 @@ import javax.inject.Inject;
 public class MainActivity extends AppCompatActivity {
 
     //Reference to the Main graph
-    MainComponent mainComponent;
+    public MainComponent mainComponent;
 
     @Inject
     MainViewModel mainViewModel;
