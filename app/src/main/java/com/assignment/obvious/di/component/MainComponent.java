@@ -28,7 +28,8 @@ public interface MainComponent {
 
     void inject(Repository repository);
 
-    void inject(ImageDetailsFragment imageDetailsFragment);
+
+    //void inject(ImageDetailsFragment imageDetailsFragment);
 
     void inject(ImageGridFragment imageGridFragment);
 }

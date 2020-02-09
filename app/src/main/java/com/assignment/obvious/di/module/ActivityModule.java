@@ -3,6 +3,8 @@ package com.assignment.obvious.di.module;
 import android.app.Activity;
 import android.content.Context;
 
+import androidx.core.content.PermissionChecker;
+
 import javax.inject.Named;
 
 import dagger.Module;

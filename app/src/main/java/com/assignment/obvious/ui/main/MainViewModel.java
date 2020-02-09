@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.assignment.obvious.data.model.ImageData;
 import com.assignment.obvious.data.repository.Repository;
+import com.assignment.obvious.ui.grid.ImageGridAdapter;
 
 import java.util.List;
 
@@ -21,7 +22,8 @@ public class MainViewModel extends ViewModel {
         this.repository = repository;
     }
 
-    LiveData<List<ImageData>> getImageDataList() {
+
+    public LiveData<List<ImageData>> getImageDataList() {
         MutableLiveData<List<ImageData>> mutableLiveData = new MutableLiveData<>();
         mutableLiveData.setValue(repository.getData());
         return mutableLiveData;

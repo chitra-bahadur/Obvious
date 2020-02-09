@@ -7,7 +7,6 @@ import com.assignment.obvious.di.module.ApplicationModule;
 import com.assignment.obvious.di.module.GsonModule;
 import com.assignment.obvious.di.module.SubComponentModule;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.List;

@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 
 import com.assignment.obvious.data.model.ImageData;
+import com.assignment.obvious.ui.grid.ImageGridAdapter;
+import com.assignment.obvious.ui.grid.ImageGridFragment;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -36,5 +38,11 @@ public class ApplicationModule {
     public Context context() {
         return application;
     }
+
+    @Provides
+    public ImageGridFragment getImageGridFragment() {
+        return new ImageGridFragment();
+    }
+
 
 }
